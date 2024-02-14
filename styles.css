@@ -1,0 +1,216 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header styles */
+header {
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.logo > a > img {
+  height: 5rem;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Navigation styles */
+.header-container {
+  display: flex;
+  height: 80px;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row-reverse; /* Reverse order if needed */
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+ul > li {
+  display: flex; /* Make each list item a flex container */
+  align-items: center;
+  margin-right: 30px;
+  color: #3d4152;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+li > span {
+  height: 19.2px;
+}
+
+.global-nav {
+  align-items: center;
+  /* No need for text-align: center; since flexbox handles alignment */
+  display: flex;
+}
+
+/* Centering icons and text within each list item */
+ul > li div {
+  display: flex; /* Ensure each child of li is also a flex container */
+  justify-content: center; /* Center elements horizontally within each li */
+  align-items: center; /* Center elements vertically within each li */
+}
+
+div > img {
+  height: 1.2em;
+  margin: 5px;
+}
+
+/* Other styles not related to centering */
+.res-cart-container {
+  margin-left: calc(10% + 36px);
+  margin-right: calc(10% + 36px);
+}
+
+.res-container {
+  display: grid;
+  list-style: none;
+  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin: 32px 16px;
+}
+
+
+.res-card-container{
+  margin-left: calc(10% + 36px);
+  margin-right: calc(10% + 36px);
+}
+.resturant-card{
+  text-decoration: none;
+  color: inherit;
+  outline: 0px;
+  cursor: pointer;
+}
+
+.rest-text{
+   margin-left: 12px;
+   padding-top: 15px;
+}
+.rest-wraper{
+  display: grid;
+  transition: all 0.05s ease 0s;
+  cursor: pointer;
+  gap: 12px;
+  grid-auto-flow: row;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.rest-img-container{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height:100%;
+}
+
+.rest-main-img-c{
+  position: relative;
+  width: 100%;
+  height:100%;
+  border-radius: 16px;
+  overflow: hidden;
+  filter: drop-shadow(rgba(0,0,0,0.1) 0px 2px 8px);
+}
+
+.rest-img{
+  width: 100%;
+  height:max-content;
+  object-fit: cover; /* Maintain aspect ratio and fill container */
+  aspect-ratio: 1 / 1; /* Square aspect ratio */
+  transition: transform 0.2s ease-in-out; /* Smooth image scaling */
+}
+.rest-name{
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro_Bold;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.75);
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  overflow-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.rest-info{
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 2px;
+  gap: 2px;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+  justify-content: start;
+}
+.add-cusine{
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 2px;
+  gap: 2px;
+}
+
+.add-cusine-sub{
+  -webkit-font-smoothing: antialiased;
+    font-family: Basis_Grotesque_Pro;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.6);
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.input-box-wraper{
+  background: #fff;
+  border: gray 1px soild;
+  border-radius: 18px;
+  
+  height: 2rem;
+}
+
+.input-container{
+  border-radius: 18px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+}
+
+.search-input{
+  border-radius: 18px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 20px;
+  
+  margin-right: 15px;}
