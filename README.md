@@ -1,4 +1,4 @@
-# Food Ordering React Site - Readme.md
+# Food Ordering React Site
 ### About:
 
 This React project is a learning exercise to create a food ordering app. It allows users to browse through a selection of restaurants, view menus, sort and filter restaurants.
