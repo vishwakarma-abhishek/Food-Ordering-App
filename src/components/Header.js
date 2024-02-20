@@ -1,21 +1,36 @@
+import { LOGO_URL } from "../util/constants";
+import { useState } from "react";
 
 const Header = () =>{
+
+    const [btnNameReact, setBtnNameReact ] = useState("Login");
+
     return(<div className="header-container">
     <header className="app-header">
       <div className="global-nav">
         <div className="logo">
           <a href="/" className="home-link" title="Food App">
-            <img src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" alt="app logo"></img>
+            <img src={LOGO_URL} alt="app logo"></img>
           </a>
         </div>
 
         <ul className="nav-option-list">
           <li>
             <div>
+              <button className="login-logout-btn" onClick={ () => {
+                btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
+                console.log("btn clicked !")
+              }}>{btnNameReact}</button>
+            </div>
+          </li>
+
+          <li>
+            <div>
               <img src="https://cdn-icons-png.flaticon.com/128/5337/5337564.png" alt="cart"></img>
               <span>Cart</span>
             </div>
           </li>
+
           <li>
             <div>
               <img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png" alt="sign In"></img>
@@ -30,13 +45,7 @@ const Header = () =>{
           </li>
           <li>
             <div>
-              <div className="input-box-wraper">
-                <div className="input-container">
-                    <input className="search-input" type="text" placeholder="Search for Food or Restaurant"/>
-                </div>
-              </div>  
-              <img src="https://cdn-icons-png.flaticon.com/128/149/149852.png" alt="Search"></img>
-              <span>Search</span>
+
             </div>
           </li>
         </ul>
