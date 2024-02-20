@@ -17,4 +17,7 @@ React: JavaScript library for building user interfaces
 CSS: Styles the frontend appearance
 
 
+![App Image](image.png)
+
+
 
