@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "react food ordering app",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "npx parcel index.html"
   },
   "author": "abhishek vishwakarma",
   "license": "ISC",
