@@ -1,4 +1,4 @@
-import { LOGO_URL } from "../util/constants";
+import LOGO_URL from "../util/constants"
 import { useState } from "react";
 
 const Header = () =>{
@@ -9,7 +9,7 @@ const Header = () =>{
     <header className="app-header">
       <div className="global-nav">
         <div className="logo">
-          <a href="/" className="home-link" title="Food App">
+          <a  className="home-link" title="Food App">
             <img src={LOGO_URL} alt="app logo"></img>
           </a>
         </div>
