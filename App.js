@@ -8,14 +8,28 @@ import About from "./src/components/About";
 import Error from "./src/components/Error";
 import Contant from "./src/components/Contact";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { useState } from "react";
+import Login from "./src/components/Login";
 
 
 
 const AppLayout = () =>{
+  const [btnNameReact, setBtnNameReact ] = useState("Login");
+  const handleLoginBtn = (state)=> {
+    setBtnNameReact(state);
+  }
+  
+  const [sidebar, setSidebar] = useState(false);
+
+  const handleSidebar =  (state)=> {
+    setSidebar(state);
+    console.log("handleSideber called !! "+state)
+  }
  return (
    <div className="main-app">
-     <Header />
+     <Header handleLoginBtn={handleLoginBtn} btnNameReact={btnNameReact} handleSidebar={handleSidebar} sidebar={sidebar} />
      <Outlet/>
+     <Login handleSidebar={handleSidebar} sidebar={sidebar} handleLoginBtn={handleLoginBtn} btnNameReact={btnNameReact}/>
      <FooterComponent/>
 
    </div>

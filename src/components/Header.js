@@ -1,9 +1,9 @@
 import LOGO_URL from "../util/constants"
-import { useState } from "react";
+// import { useState } from "react";
 
-const Header = () =>{
+const Header = ({handleLoginBtn,btnNameReact, handleSidebar, sidebar}) =>{
 
-    const [btnNameReact, setBtnNameReact ] = useState("Login");
+    // const [btnNameReact, setBtnNameReact ] = useState("Login");
 
     return(<div className="header-container">
     <header className="app-header">
@@ -18,8 +18,9 @@ const Header = () =>{
           <li>
             <div>
               <button className="login-logout-btn" onClick={ () => {
-                btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login");
+                btnNameReact === "Login" ? handleSidebar(true) : handleLoginBtn("Login");
                 console.log("btn clicked !")
+                
               }}>{btnNameReact}</button>
             </div>
           </li>
@@ -31,12 +32,12 @@ const Header = () =>{
             </div>
           </li>
 
-          <li>
+          {/* <li>
             <div>
               <img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png" alt="sign In"></img>
               <span>Sign In</span>
             </div>
-          </li>
+          </li> */}
           <li>
             <div>
               <img src="https://cdn-icons-png.flaticon.com/128/879/879757.png" alt="Offers"></img>

@@ -1,17 +1,23 @@
 import RestaurentCard from "./RestaurentCard";
 import { useState, useEffect } from "react";
 import ShimmerCard from "./ShimmerCard";
+import Login from "./Login";
 import restListMock from "../util/mockData"
+import { useState } from "react";
 
 const AppBody = () => {
   const [listOfRestaurants, SetListOfRestaurant] = useState([]);
   const [filteredList, setFilteredList] = useState([]) ;
+
+
 
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fechData();
   }, []);
+
+  
 
   fechData = async () => {
     try {
@@ -53,6 +59,8 @@ const AppBody = () => {
 
   return (
     
+    
+
     <div className="main-container">
       <main>
         <div className="filter">
@@ -114,6 +122,7 @@ const AppBody = () => {
           </div>
         </div>
       </main>
+      
     </div>
   );
 };
