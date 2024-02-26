@@ -1,14 +1,20 @@
 {
+  "homepage": "https://vishwakarma-abhishek.github.io/Food-Ordering-App",
   "name": "react-food-ordering-app",
   "version": "1.0.0",
   "description": "react food ordering app",
   "scripts": {
-    "test": "jest",
-    "start": "npx parcel index.html"
+    
+    "start": "npx parcel index.html",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
+    "build": "npx parcel build index.html",
+    "test": "jest"
   },
   "author": "abhishek vishwakarma",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "parcel": "^2.11.0",
     "process": "^0.11.10"
   },

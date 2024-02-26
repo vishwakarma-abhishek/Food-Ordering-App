@@ -6,7 +6,7 @@ const FooterComponent =  () => {
 
         <div className="footer-coninter">
             <footer className="footer">
-                <ul className="footer-ele-ul">
+                <ul className="footer-ele-ul nav-option-list">
                     <li className="footer-ele-li"><Link to="/">Home</Link></li>
                     <li className="footer-ele-li"><Link to="/about">About</Link></li>
                     <li className="footer-ele-li"><Link to="/contact">Contact Us</Link></li>

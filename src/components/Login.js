@@ -65,6 +65,7 @@ const Login = ({handleSidebar, sidebar, handleLoginBtn, btnNameReact}) => {
                                             type="tel"
                                             name="mobile"
                                             id="mobile"
+                                            required
                                             tabIndex="1"
                                             maxLength="10"
                                             autoComplete="off"
@@ -84,6 +85,7 @@ const Login = ({handleSidebar, sidebar, handleLoginBtn, btnNameReact}) => {
                                             type="password"
                                             name="password"
                                             id="password"
+                                            required
                                             tabIndex="2"
                                             maxLength="16"
                                             autoComplete="off"
