@@ -207,6 +207,7 @@ div > img {
   gap: 8px;
   font-weight: 540;
   font-size: 18px;
+  color: #02060cbf;
   grid-auto-flow: column;
   -webkit-box-pack: start;
   justify-content: start;
@@ -754,6 +755,7 @@ gap: 20%; */
 }
 
 .RestaurantTimeCost_wrapper{
+  height: 20px;
   display: flex;
   flex-direction: row;
   margin-bottom: 18px;
@@ -796,3 +798,148 @@ svg{
   height: 16px;
   border-bottom: 16px solid #f1f1f6;
 }
+
+
+/* food item */
+
+.styles_container {
+  padding-bottom: 14px;
+}
+
+.styles_item {
+  
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0 20px;
+
+  
+}
+
+.styles_detailsContainer {
+  max-width: calc(100% - 144px);
+}
+
+.styles_itemName {
+  margin-top: 4px;
+}
+
+.styles_itemNameText {
+  margin-right: 4px;
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: #3e4152;
+  word-break: break-word;
+  margin-bottom: 6px;
+}
+
+.styles_price {
+  font-size: 1rem;
+
+  margin-right: 8px;
+  font-weight: 400;
+  color: #3e4152;}
+
+
+  .styles_itemDesc {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40,44,63,.45);
+    width: 70%;
+    letter-spacing: -.3px;
+    font-size: 1rem;}
+
+    .styles_itemImageContainer {
+      position: relative;
+      margin-left: 16px;
+      min-width: 118px;
+      height: 120px;
+      font-size: 0;
+      border: none;
+  }
+
+  
+  .styles_itemImage__3CsDL {
+  background: #e0eef5;
+    width: 118px;
+    height: 96px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    
+  
+    border: none;
+    border-radius: 10px;}
+
+
+    .styles_itemImage-img {
+      width: 118px;
+      height: 96px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-radius: 6px;
+
+      border-style: none;
+  }
+
+
+  .styles_itemAddButton {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+._1RPOp {
+  color: #60b246;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+._3Hy2E {
+  position: absolute;
+  right: 2px;
+  top: -35%;
+  -ms-transform-origin: -6px 6px;
+  transform-origin: -6px 6px;
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  cursor: pointer;
+}
+
+.main_buttonInner__z6Jz0 {
+  width: 96px!important;
+  height: 36px!important;
+}
+
+.main_button__3gpqi {
+  position: relative;
+  width: 96px;
+  min-height: 36px;
+}
+._211P0 {
+  position: absolute;
+  bottom: -10px;
+  width: 96px;
+  min-height: 36px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  box-shadow: 0 3px 8px #e9e9eb;
+  border-radius: 4px;
+}
+._3L1X9 {
+  /* display: inline-block; */
+  height: 30px;
+  width: 83px;
+  border: 1px solid #d4d5d9;
+  color: #60b246;
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  background-color: #fff;}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LOGO_URL from "../util/constants"
 // import { useState } from "react";
 
@@ -8,11 +9,11 @@ const Header = ({handleLoginBtn,btnNameReact, handleSidebar, sidebar}) =>{
     return(<div className="header-container">
     <header className="app-header">
       <div className="global-nav">
-        <div className="logo">
+        <Link to="/"><div className="logo">
           <a  className="home-link" title="Food App">
             <img src={LOGO_URL} alt="app logo"></img>
           </a>
-        </div>
+        </div></Link>
 
         <ul className="nav-option-list">
           <li>

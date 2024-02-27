@@ -4,10 +4,9 @@
   "version": "1.0.0",
   "description": "react food ordering app",
   "scripts": {
-    
     "start": "npx parcel index.html",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "npx parcel build index.html",
     "test": "jest"
   },

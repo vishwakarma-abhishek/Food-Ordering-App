@@ -4,6 +4,7 @@ import ShimmerCard from "./ShimmerCard";
 import Login from "./Login";
 import restListMock from "../util/mockData"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const AppBody = () => {
   const [listOfRestaurants, SetListOfRestaurant] = useState([]);
@@ -18,8 +19,7 @@ const AppBody = () => {
   }, []);
 
   
-
-  fechData = async () => {
+  const fechData = async () => {
     try {
       const data = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LIS"
@@ -114,10 +114,10 @@ const AppBody = () => {
         <div className="res-card-container">
           <div className="res-container">
             {filteredList.map((restaurant) => (
-              <RestaurentCard
+              <Link to={"/restaurants/"+restaurant?.info?.id}><RestaurentCard
                 key={restaurant?.info?.id}
                 resData={restaurant?.info}
-              />
+              /></Link>
             ))}
           </div>
         </div>
