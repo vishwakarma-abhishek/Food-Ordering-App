@@ -10,6 +10,8 @@ Menu browsing: Users can view available menu items with descriptions and prices.
 Search functionality: Users can search restaurant by name or by keywords in the name.
 Sort by rating functionality: Users can sort restaurant by rating for low to high
 Top rated restaurants functionality: Users can filter out top rated restaurant that are above 4 star rating
+Hotel/Restaurant menu page: User can go to the specific reataurant menu page form home by click and navigate functionality 
+
 
 ### Technologies:
 
@@ -18,6 +20,12 @@ CSS: Styles the frontend appearance
 
 
 ![App Image](image.png)
+
+![login side panel ](image-2.png)
+
+![restaurent1 menu](image-1.png)
+
+![restaurent2 menu](image-3.png)
 
 
 

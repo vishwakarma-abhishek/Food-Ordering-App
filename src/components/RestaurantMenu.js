@@ -14,9 +14,7 @@ const RestaurantMenau = () => {
       fetchMenu();
     }, []);
 
-  if(foodItemList === null){
-    return (<ShimmmerCard/>)
-  }
+
   const fetchMenu = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.492775&lng=78.38635579999999&restaurantId="+resId
@@ -46,32 +44,45 @@ const RestaurantMenau = () => {
     // const {name, areaName, avgRatingString, totalRatingsString }  =  jsonMenu.data.cards[2].card.card.info;
   };
 
+  while(foodItemList === null){
+    return (<ShimmmerCard/>)
+  }
+
+ 
 
   if(foodItemList!==null){
+
+
+    const desiredObject = foodItemList?.data?.cards?.find( (card) => card?.card?.info?.id == resId  );
+    console.log(desiredObject)
+    
+
 
       return (
         
         <div className="rest-menu-component">
             
             {/* foodItemList?.data?.cards[4].groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.itemCards */}
+
+           
           <div className="menu-rest-name-container">
             <div>
-              <h1 className="menu-rest-name">{foodItemList?.data?.cards[2]?.card?.card?.info?.name}</h1>
+              <h1 className="menu-rest-name">{foodItemList?.data?.cards[0]?.card?.card?.info?.name}</h1>
             </div>
           </div>
           <div className="rest-menu-header-container">
             <div className="rest-menu-header-wrapper">
               <div className="RestaurantNameAddress_wrapper">
                 <div aria-hidden="true">
-                  <p className="RestaurantNameAddress_name__">{foodItemList?.data?.cards[2]?.card?.card?.info?.name}</p>
-                  <p className="RestaurantNameAddress_cuisines">{(foodItemList?.data?.cards[2]?.card?.card?.info?.cuisines).join(", ")}</p>
+                  <p className="RestaurantNameAddress_name__">{foodItemList?.data?.cards[0]?.card?.card?.info?.name}</p>
+                  <p className="RestaurantNameAddress_cuisines">{(foodItemList?.data?.cards[0]?.card?.card?.info?.cuisines).join(", ")}</p>
                 </div>
                 <div className="RestaurantNameAddress_areaWrapper">
                   <p className="RestaurantNameAddress_area" aria-hidden="true">
-                    {foodItemList?.data?.cards[2]?.card?.card?.info?.areaName}
+                    {foodItemList?.data?.cards[0]?.card?.card?.info?.areaName}
                   </p>
                   <p className="RestaurantNameAddress_area_km" aria-hidden="true">
-                  {foodItemList?.data?.cards[2]?.card?.card?.info?.sla?.lastMileTravelString}
+                  {foodItemList?.data?.cards[0]?.card?.card?.info?.sla?.lastMileTravelString}
                   </p>
                 </div>
               </div>
@@ -82,10 +93,10 @@ const RestaurantMenau = () => {
               >
                 <span className="RestaurantRatings_avgRating" aria-hidden="true">
                   <span className="icon-star" />
-                  <span>{foodItemList?.data?.cards[2]?.card?.card?.info?.avgRatingString}</span>
+                  <span>{foodItemList?.data?.cards[0]?.card?.card?.info?.avgRatingString}</span>
                 </span>
                 <span className="RestaurantRatings_totalRatings" aria-hidden="true">
-                  {foodItemList?.data?.cards[2]?.card?.card?.info?.totalRatingsString}
+                  {foodItemList?.data?.cards[0]?.card?.card?.info?.totalRatingsString}
                 </span>
               </button>
             </div>
@@ -98,7 +109,7 @@ const RestaurantMenau = () => {
                   aria-hidden="true"
                 ></img> */}
                 <span className="RestaurantMessage_text" aria-hidden="true">
-                {foodItemList?.data?.cards[2]?.card?.card?.info?.feeDetails?.message}
+                {foodItemList?.data?.cards[0]?.card?.card?.info?.feeDetails?.message}
                 </span>
 
               </li>
@@ -126,7 +137,7 @@ const RestaurantMenau = () => {
                       fill="#3E4152"
                     />
                   </svg>
-                  <span>{foodItemList?.data?.cards[2]?.card?.card?.info?.sla?.slaString}</span>
+                  <span>{foodItemList?.data?.cards[0]?.card?.card?.info?.sla?.slaString}</span>
                 </li>
                 <li className="RestaurantTimeCost_item">
                   <svg
@@ -149,7 +160,7 @@ const RestaurantMenau = () => {
                       fill="#3E4152"
                     />
                   </svg>
-                  <span>{foodItemList?.data?.cards[2]?.card?.card?.info?.costForTwoMessage}</span>
+                  <span>{foodItemList?.data?.cards[0]?.card?.card?.info?.costForTwoMessage}</span>
                 </li>
               </ul>
             </div>
@@ -176,8 +187,10 @@ const RestaurantMenau = () => {
                     
                 </div>
     
-                <div>{
-                        foodItemList?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map((item) => (
+                <div>{console.log(foodItemList)}
+                  
+                  {
+                        foodItemList?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map((item) => (
 
                             <FoodItem key={item.card.info.id} item={item} foodItemList={foodItemList}/>
                         ))
