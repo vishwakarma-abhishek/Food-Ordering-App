@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import FoodItem from "./FoodItem";
 import ShimmmerCard from "./ShimmerCard"
 import { useParams } from 'react-router-dom';
+import MenuCategory from "./MenuCategory";
 
 const RestaurantMenau = () => {
 
@@ -186,6 +187,7 @@ const RestaurantMenau = () => {
                 </div>
                 <div className="main-border"> </div>
             </div>
+            {/* <MenuCategory foodItemList={foodItemList}/> */}
         </div>
       );
   }
