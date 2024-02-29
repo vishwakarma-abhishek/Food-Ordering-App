@@ -21,27 +21,7 @@ const RestaurantMenau = () => {
     );
     const jsonMenu = await data.json();
     setFoodItem(jsonMenu);
-    // const {
-    //     name,
-    //     areaName,
-    //     avgRatingString,
-    //     totalRatingsString,
-    //     sla: { lastMileTravelString, message },
-    //   } = await jsonMenu.data.cards[2].card.info;
-      
-    //   console.log({
-    //     name,
-    //     areaName,
-    //     avgRatingString,
-    //     totalRatingsString,
-    //     lastMileTravelString,
-    //     message,
-    //   });
-    
-  
-    // const {name, areaName, lastMileTravelString, avgRatingString, totalRatingsString } = jsonMenu.data.cards[2].card.card.info;
-    // const info = jsonMenu.data.cards[2].card.card.info;
-    // const {name, areaName, avgRatingString, totalRatingsString }  =  jsonMenu.data.cards[2].card.card.info;
+
   };
 
   while(foodItemList === null){
@@ -62,8 +42,7 @@ const RestaurantMenau = () => {
         
         <div className="rest-menu-component">
             
-            {/* foodItemList?.data?.cards[4].groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.itemCards */}
-
+           
            
           <div className="menu-rest-name-container">
             <div>
@@ -102,12 +81,6 @@ const RestaurantMenau = () => {
             </div>
             <ul>
               <li className="RestaurantMessage_wrapper">
-                {/* <img
-                  src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_18,h_18/v1648208530/surgecreatives/info"
-                  alt="DISTANCE_FEE_NON_FOOD_LM"
-                  className="RestaurantMessage_icon__1qCvu"
-                  aria-hidden="true"
-                ></img> */}
                 <span className="RestaurantMessage_text" aria-hidden="true">
                 {foodItemList?.data?.cards[0]?.card?.card?.info?.feeDetails?.message}
                 </span>

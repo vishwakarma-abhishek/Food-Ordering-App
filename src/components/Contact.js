@@ -4,7 +4,6 @@ import { useReducer } from "react";
 
 const Contact = () => {
 
-  const {name, email, githubAcc} = userList[0];
   {console.log(userList)}
   return (
       <div>
@@ -14,14 +13,6 @@ const Contact = () => {
             <h2>List of contributers </h2>
             <div className="userCard-container">
               {userList.map((user) => { return(<User key={user.id} info={user}/>)})}
-              {/* {<User info={userList[0]}/>} */}
-
-              {/* <div >
-                <h3>{name}</h3>
-                <h4>{email}</h4>
-                <h4>{githubAcc}</h4>
-
-              </div> */}
             </div>
         </div>
     </div>
