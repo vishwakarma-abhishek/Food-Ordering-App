@@ -943,3 +943,29 @@ svg{
   position: relative;
   text-align: center;
   background-color: #fff;}
+
+
+
+  /*  contact page */
+
+
+  .contact-container{
+
+    margin: 20px 100px;
+    padding: 20px;
+  }
+
+  .contact-header {
+    margin-top: 50px;
+  }
+
+  .userCard-container{
+    display: flex;
+    gap: 20px;
+    flex-grow: calc(30%);
+  }
+  .user-container{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #282c3f;
+  }
