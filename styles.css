@@ -353,12 +353,6 @@ gap: 20%; */
 
 }
 
-.footer{
-
-  /* display: flex; */
-  /* height: 20%; */
-  
-}
 
 .footer-ele-ul{
  /* display: flex; */
@@ -457,23 +451,15 @@ gap: 20%; */
 
 }
 
-.icon-close-thin > img{
-  /* color: #535665;
-  cursor: pointer;
-  font-weight: 600;
-  line-height: 14px; */
-  
-}
+
+
 .cross{
  
   height: 20px;
   
 }
 
-.icon-close-thin::before{
 
-  /* content: "\E913"; */
-}
 
 .login-label{
   margin-top: 25px;
