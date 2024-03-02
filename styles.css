@@ -353,12 +353,6 @@ gap: 20%; */
 
 }
 
-.footer{
-
-  /* display: flex; */
-  /* height: 20%; */
-  
-}
 
 .footer-ele-ul{
  /* display: flex; */
@@ -457,23 +451,15 @@ gap: 20%; */
 
 }
 
-.icon-close-thin > img{
-  /* color: #535665;
-  cursor: pointer;
-  font-weight: 600;
-  line-height: 14px; */
-  
-}
+
+
 .cross{
  
   height: 20px;
   
 }
 
-.icon-close-thin::before{
 
-  /* content: "\E913"; */
-}
 
 .login-label{
   margin-top: 25px;
@@ -943,3 +929,29 @@ svg{
   position: relative;
   text-align: center;
   background-color: #fff;}
+
+
+
+  /*  contact page */
+
+
+  .contact-container{
+
+    margin: 20px 100px;
+    padding: 20px;
+  }
+
+  .contact-header {
+    margin-top: 50px;
+  }
+
+  .userCard-container{
+    display: flex;
+    gap: 20px;
+    flex-grow: calc(30%);
+  }
+  .user-container{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #282c3f;
+  }

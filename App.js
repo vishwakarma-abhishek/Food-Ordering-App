@@ -6,7 +6,7 @@ import AppBody from "./src/components/AppBody";
 import FooterComponent from "./src/components/FooterComponent";
 import About from "./src/components/About";
 import Error from "./src/components/Error";   
-import Contant from "./src/components/Contact";
+import Contact from "./src/components/Contact";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Login from "./src/components/Login";
@@ -57,7 +57,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contant />,
+        element: <Contact />,
         errorElement: <Error />,
       },
     ],
