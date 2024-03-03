@@ -21,7 +21,7 @@ export const userList = [
     },
     {   
         id:2,
-        name: "Kirishn kanhi",
+        name: "Kirishn kanahi",
         email:"kirshna@gmail.com",
         githubAcc: "https://github.com/"
     }

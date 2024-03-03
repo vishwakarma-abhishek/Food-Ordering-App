@@ -110,10 +110,7 @@ div > img {
   margin-right: calc(10% + 36px);
 }
 
-.main-container{
-  /* filter: blur(5px); */
-  
-}
+
 
 .res-container {
   display: grid;
@@ -246,7 +243,7 @@ div > img {
 .input-container{
   border-radius: 18px;
   height: 100%;
-  /* margin-top: 10px; */
+ 
   flex-direction: row;
   justify-content: flex-end;
   
@@ -255,14 +252,12 @@ div > img {
 .search-input{
   border-radius: 18px;
   height: 100%;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-end; */
+
   padding: 0 15px;
   min-width: 210px;
   margin-right: 5px;
   text-align: start;
-  /* margin-top: 2px; */
+
 }
 
 .search-btn{
@@ -276,9 +271,6 @@ div > img {
   border: 1px solid whitesmoke;
   border-radius: 20px;
   margin-right: 50px;
-
-  /* margin-top: 10px;
-  filter: drop-shadow(rgba(0,0,0,0.1) 0px 2px 8px); */
 
 }
 
@@ -337,28 +329,18 @@ div > img {
 
 .footer-coninter{
   background-color: #a8a8a8;
-  /* position: fixed;
-  bottom: ; */
-/* display: flex;
-gap: 20%; */
 
-  /* position: ; */
   left: 0;
   bottom: 0;
   width: 100%;
 
-
   text-align: center;
-
 
 }
 
 
 .footer-ele-ul{
- /* display: flex; */
 
- /* margin-right: calc(10% + 36px); */
- /* margin-left: calc(10% + 36px); */
  align-items: center;
  flex-direction: column;
  padding: 20px 0;
@@ -370,7 +352,7 @@ gap: 20%; */
 .footer-ele-li{
 
   padding: 5px;
-  /* margin: 10px; */
+
   color: white;
   font-size: 18px;
   font-weight: 600;
@@ -406,7 +388,7 @@ gap: 20%; */
   transition: transform .3s ease-out;
   z-index: 10001;
   transform: translateZ(0);
-  /* box-shadow:0 0 0 10000px rgba(0,0,0,.50); */
+
 
 }
 
@@ -415,8 +397,6 @@ gap: 20%; */
 }
 
 .login-container{
-
-
 
   width: 500px;
   padding-left: 40px;
@@ -432,7 +412,6 @@ gap: 20%; */
   padding-left: 40px;
   padding-right: 360px;
   width: 775px;
-
 
 }
 
@@ -506,14 +485,6 @@ gap: 20%; */
 .login-input-container{
 
   border: 1px solid #d4d5d9;
-
-  /* border-bottom: 1px solid #d4d5d9 !important;
-
-  border-bottom: 0 !important;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(212, 213, 217); */
-
 
   padding: 0;
   display: block;
@@ -625,8 +596,7 @@ gap: 20%; */
 
 .menu-rest-name{
   -webkit-font-smoothing: antialiased;
-  /* font-family: Basis_Grotesque_Pro; */
-  /* font-weight: 800; */
+
   font-size: 26px;
   line-height: 28px;
   letter-spacing: -0.4px;
