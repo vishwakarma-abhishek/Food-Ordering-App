@@ -3,26 +3,27 @@ import FoodItem from "./FoodItem";
 import ShimmmerCard from "./ShimmerCard"
 import { useParams } from 'react-router-dom';
 import MenuCategory from "./MenuCategory";
+import useRestaurantMenu from "../util/useRestaurantMenu";
 
 const RestaurantMenau = () => {
 
-   const [foodItemList, setFoodItem] = useState()
-
-   const {resId} = useParams();
-
-    useEffect(() => {
-      fetchMenu();
-    }, []);
+  const {resId} = useParams();
+  const foodItemList = useRestaurantMenu(resId);
 
 
-  const fetchMenu = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.492775&lng=78.38635579999999&restaurantId="+resId
-    );
-    const jsonMenu = await data.json();
-    setFoodItem(jsonMenu);
+  //   useEffect(() => {
+  //     fetchMenu();
+  //   }, []);
 
-  };
+
+  // const fetchMenu = async () => {
+  //   const data = await fetch(
+  //     "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.492775&lng=78.38635579999999&restaurantId="+resId
+  //   );
+  //   const jsonMenu = await data.json();
+  //   setFoodItem(jsonMenu);
+
+  // };
 
   while(foodItemList === null){
     return (<ShimmmerCard/>)
