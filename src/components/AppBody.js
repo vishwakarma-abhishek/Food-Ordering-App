@@ -5,6 +5,7 @@ import Login from "./Login";
 import restListMock from "../util/mockData"
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../util/useOnlineStatus";
 
 const AppBody = () => {
   const [listOfRestaurants, SetListOfRestaurant] = useState([]);
@@ -13,6 +14,7 @@ const AppBody = () => {
 
 
   const [searchText, setSearchText] = useState("");
+
 
   useEffect(() => {
     fechData();
@@ -39,6 +41,9 @@ const AppBody = () => {
     //   console.log(" finally caought error (finally block ) :");
     // }
   };
+
+
+    
 
   if (listOfRestaurants.length === 0) {
     return (

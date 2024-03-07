@@ -11,6 +11,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Login from "./src/components/Login";
 import RestaurantMenau from "./src/components/RestaurantMenu";
+import useOnlineStatus from "./src/util/useOnlineStatus";
 
 
 
@@ -25,6 +26,13 @@ const AppLayout = () =>{
   const handleSidebar =  (state)=> {
     setSidebar(state);
     console.log("handleSideber called !! "+state)
+  }
+
+  const onlineStatus = useOnlineStatus();
+
+  if(!onlineStatus){
+    console.log("user if offline");
+  return (<h1>Looks like you are offline!!! Please check your internet connect.</h1>);
   }
  return (
    <div className="main-app">
