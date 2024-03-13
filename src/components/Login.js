@@ -29,10 +29,10 @@ const Login = ({handleSidebar, sidebar, handleLoginBtn, btnNameReact}) => {
         if (sidebar === true){
             
             return (
-                <div className="login-component">
+                <div className="login-component w-1/3 h-full bg-gray-50 fixed top-0 right-0 shadow-2xl">
                     
-                    <div className="right-space"></div>
-                    <div className="login-container">
+                    <div className="right-space "></div>
+                    <div className="login-container pl-20    pt-8 pr-8">
                         <div>
                             {/* style="padding-left: 40px; padding-right: 84px; width: 486px;" */}
                             <div className="input-fields_lables-container">
@@ -43,25 +43,25 @@ const Login = ({handleSidebar, sidebar, handleLoginBtn, btnNameReact}) => {
                                         onCrossClick(false);  
                                         console.log("sidebar closed")}}>
                                             
-                                        <img className="cross" src={CROSS_ICON}/>
+                                        <img className="cross w-9" src={CROSS_ICON}/>
                                     </span>
-                                    <div className="login-label">Login</div>
+                                    <div className="login-label text-2xl font-bold py-4">Login</div>
                                     <div className="create-acc">
                                     or 
-                                    <a className="_3p4qh">create an account</a>
+                                    <a className="_3p4qh text-xl"> create an account</a>
                                     </div>
                                     <img
-                                    className="food-icon"
+                                    className="food-icon w-28 ml-72 fixed top-20"
                                     imageurl="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r"
                                     alt="img renderer"
                                     src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r"
                                     />
                                 </div>
                                 <form>
-                                <div>
-                                    <div className="login-input-container">
+                                <div className="flex flex-col gap-5 py-9">
+                                    <div className="login-input-container w-64 h-14  px-3 border-2 border-solid border-orange-200 hover:border-green-200">
                                         <input
-                                            className="input-box"
+                                            className="input-box "
                                             type="tel"
                                             name="mobile"
                                             id="mobile"
@@ -79,7 +79,7 @@ const Login = ({handleSidebar, sidebar, handleLoginBtn, btnNameReact}) => {
                                         </div>
                                     </div>
         
-                                    <div className="login-input-container">
+                                    <div className="login-input-container w-64 h-14  px-3 border-2 border-solid border-orange-200 hover:border-green-200">
                                         <input
                                             className="input-box"
                                             type="password"
@@ -102,7 +102,7 @@ const Login = ({handleSidebar, sidebar, handleLoginBtn, btnNameReact}) => {
                                 </div>
         
         
-                                <div className="login-btn">
+                                <div className="login-btn w-40 bg-orange-400  rounded-lg text-center  text-white font-bold  text-xl px-4 py-1 my-9 ">
                                     <a className="a-login-btn" onClick={ handleLogin}>
                                         
                                     {/***style="display: none;" */}Login

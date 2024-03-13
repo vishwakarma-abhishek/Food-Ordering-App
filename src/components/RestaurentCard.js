@@ -7,21 +7,24 @@ const RestaurentCard = (props) =>{
     const{ name,cloudinaryImageId, locality,areaName, avgRating, costForTwo,cuisines} = resData;
 
     return (
-      <a className="resturant-card">
-        <div className="rest-wraper">
-          <div className="rest-img-container">
-            <div className="rest-main-img-c">
-              <img
-                className="rest-img"
+      <a className="resturant-card shadow-xl ">
+        <div className="hover:bg-gray-100 rounded-lg">
+        <div className="rest-wraper ">
+          <div className="rest-img-container ">
+            <div className="rest-main-img-c ">
+              <img 
+                className="rounded-lg   
+                "
                 src={CDN_URL + cloudinaryImageId}
                 alt="Wow! Momo"
               ></img>
             </div>
           </div>
         </div>
-        <div className="rest-text">
-          <div className="rest-name padding-10">{name}</div>
-          <div className="rest-info padding-10">
+        <div className="rest-text pl-2 mt-3">
+          <div className="rest-name padding-10 text-lg font-bold">{name}</div>
+          <div className="rest-info padding-10 flex gap-3 items-center text-md my-1">
+
             <div className="star-container">
               <svg
                 width="20"
@@ -65,6 +68,7 @@ const RestaurentCard = (props) =>{
             <div className="add-cusine-sub">{cuisines.join(", ")}</div>
             <div className="add-cusine-sub">{locality + ", " + areaName}</div>
           </div>
+        </div>
         </div>
       </a>
     );

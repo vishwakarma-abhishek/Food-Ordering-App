@@ -1,5 +1,5 @@
 
-import LOGO_URL from "../util/app-logo.png";
+import LOGO_URL from "../util/food-logo.png";
 
 
 

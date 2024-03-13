@@ -41,11 +41,11 @@ const RestaurantMenau = () => {
 
       return (
         
-        <div className="rest-menu-component">
+        <div className="rest-menu-component px-72">
             
            
            
-          <div className="menu-rest-name-container">
+          <div className="menu-rest-name-container font-bold text-2xl my-10">
             <div>
               <h1 className="menu-rest-name">{foodItemList?.data?.cards[0]?.card?.card?.info?.name}</h1>
             </div>
@@ -54,7 +54,7 @@ const RestaurantMenau = () => {
             <div className="rest-menu-header-wrapper">
               <div className="RestaurantNameAddress_wrapper">
                 <div aria-hidden="true">
-                  <p className="RestaurantNameAddress_name__">{foodItemList?.data?.cards[0]?.card?.card?.info?.name}</p>
+                  <p className="RestaurantNameAddress_name__ font-bold">{foodItemList?.data?.cards[0]?.card?.card?.info?.name}</p>
                   <p className="RestaurantNameAddress_cuisines">{(foodItemList?.data?.cards[0]?.card?.card?.info?.cuisines).join(", ")}</p>
                 </div>
                 <div className="RestaurantNameAddress_areaWrapper">
@@ -88,10 +88,10 @@ const RestaurantMenau = () => {
 
               </li>
             </ul>
-            <hr className="RestaurantHeader_dottedSeparator" aria-hidden="true"></hr>
-            <div className="RestaurantHeader_marginBottom" aria-hidden="true">
-              <ul className="RestaurantTimeCost_wrapper">
-                <li className="RestaurantTimeCost_item">
+            <hr className="RestaurantHeader_dottedSeparator my-5" aria-hidden="true"></hr>
+            <div className="RestaurantHeader_marginBottom mb-4" aria-hidden="true">
+              <ul className="RestaurantTimeCost_wrapper flex flex-row gap-4">
+                <li className="RestaurantTimeCost_item flex flex-row gap-2 items-center">
                   <svg
                     className="RestaurantTimeCost_icon"
                     width="18"
@@ -113,7 +113,7 @@ const RestaurantMenau = () => {
                   </svg>
                   <span>{foodItemList?.data?.cards[0]?.card?.card?.info?.sla?.slaString}</span>
                 </li>
-                <li className="RestaurantTimeCost_item">
+                <li className="RestaurantTimeCost_item flex flex-row gap-2 items-center">
                   <svg
                     className="RestaurantTimeCost_icon"
                     width="18"
@@ -140,7 +140,7 @@ const RestaurantMenau = () => {
             </div>
           </div>
           <div>
-            <div className="styles_divider"></div>
+            <div className="styles_divider border-b h-1"></div>
           </div>
             <div className="menu-cat">
                 <div className="menu-item-container">
@@ -152,7 +152,7 @@ const RestaurantMenau = () => {
                     aria-expanded="true"
                     data-role="category-heading"
                     >
-                    <h3 className="styles_headerNestedTitle__1PFSM">
+                    <h3 className="styles_headerNestedTitle__1PFSM text-2xl font-semibold my-9">
                         <span aria-hidden="true">Recommended</span>
                     </h3>
                     <span className="icon-downArrow styles_open__3WxOr" aria-hidden="true" />
